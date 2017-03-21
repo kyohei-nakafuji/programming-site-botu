@@ -1,0 +1,16 @@
+<h1> Messages </h1>
+<ul>
+  <li *ngFor="let item of messages">
+    {{item.message}}
+  </li>
+</ul>
+<div class="config">
+  <input type="button" (click)="onSend()" value="Get Message">
+</div>
+<h1> Set Message </h1>
+<div class="config">
+  <form action="/Message" method="post">
+    <input type="input" name="message">
+    <button type="submit">Set Message</button>
+  </form>
+</div>
